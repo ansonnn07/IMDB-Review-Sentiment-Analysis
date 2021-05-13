@@ -1,6 +1,6 @@
 # IMDB Movie Review Sentiment Analysis
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/ansonnn07/used-car-price-prediction/main/app.py)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://imdb-review-sentiment-1.herokuapp.com/)
 
 ## Built with
 <code><img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
@@ -20,7 +20,7 @@
 - The movie review data was downloaded from [Kaggle](https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews), and it was collected from IMDB movie reviews.
 
 ## Web Application
-The Web App is accessible [here](https://share.streamlit.io/ansonnn07/used-car-price-prediction/main/app.py) which you can directly see all the visualizations made.
+The Web App is accessible [here](https://imdb-review-sentiment-1.herokuapp.com/) which you can directly see all the visualizations made.
 
 ## Acknowledgement
 - Link to the Kaggle dataset: https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
