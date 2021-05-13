@@ -26,6 +26,7 @@ class DistilBert(nn.Module):
                                        head_mask=head_mask)
         # [BATCH_SIZE=BS, MAX_SEQ_LENGTH = 512, DIM = 768]
         hidden_state = model_output[0]
+        # get the first token as pooled_output
         pooled_output = hidden_state[:, 0]  # [BS, 768]
         pooled_output = self.pre_classifier(pooled_output)  # [BS, 768]
         pooled_output = F.relu(pooled_output)  # [BS, 768]
@@ -68,15 +69,8 @@ class Model:
         predicted_class = predicted_class.cpu().item()
         probabilities = probabilities.flatten().cpu().numpy().tolist()
 
-        return (
-            config.CLASS_NAMES[predicted_class],
-            confidence,
-            dict(zip(config.CLASS_NAMES, probabilities)),
-        )
+        sentiment = config.CLASS_NAMES[predicted_class]
+        sentiment_proba_dict = dict(zip(config.CLASS_NAMES,
+                                        probabilities))
 
-
-model = Model()
-
-
-def get_model():
-    return model
+        return (sentiment, confidence, sentiment_proba_dict)

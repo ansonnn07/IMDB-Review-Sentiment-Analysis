@@ -1,12 +1,10 @@
+BERT_MODEL_NAME = "distilbert-base-uncased"
 
+TRAINED_MODEL_PATH = "data/best_model_state.bin"
 
-"BERT_MODEL_NAME" = "distilbert-base-uncased"
+CLASS_NAMES = ["negative",
+               "neutral",
+               "positive"
+               ]
 
-"TRAINED_MODEL_PATH" = "data/model_state_dict.bin"
-
-"CLASS_NAMES" = ["negative",
-                 "neutral",
-                 "positive"
-                 ]
-
-"MAX_SEQUENCE_LEN" = 512
+MAX_SEQUENCE_LEN = 512
