@@ -1,10 +1,9 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from transformers import BertModel, AutoTokenizer
-from transformers import AutoConfig, AutoModel
+from transformers import AutoTokenizer, AutoConfig, AutoModel
 
-from src import config
+import config
 
 
 class DistilBert(nn.Module):
@@ -19,7 +18,7 @@ class DistilBert(nn.Module):
         self.out = nn.Linear(model_config.dim, num_classes)
 
     def forward(self, input_ids, attention_mask=None, head_mask=None):
-        assert attention_mask is not None, "attention mask is none"
+        assert attention_mask is not None
 
         model_output = self.distilbert(input_ids=input_ids,
                                        attention_mask=attention_mask,
@@ -74,3 +73,10 @@ class Model:
                                         probabilities))
 
         return (sentiment, confidence, sentiment_proba_dict)
+
+
+model = Model()
+
+
+def get_model():
+    return model
