@@ -1,4 +1,3 @@
-textwrap
 joblib
 pandas==1.2.4
 streamlit==0.81.1
